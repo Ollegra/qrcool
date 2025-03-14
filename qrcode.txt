@@ -1,0 +1,20 @@
+Список доступных цветных масок для использования с аргументом color_mask:
+
+У всех ниже представленных классов (за исключением ImageColorMask()), аргументы означают цвет и принимают кортеж RGB, например back_color=(255,255,255).
+
+SolidFillColorMask(back_color, front_color): Просто заливает фон одним цветом, а передний план - другим.
+RadialGradiantColorMask(back_color, center_color, edge_color): Заполняет передний план радиальным градиентом от центра к краю.
+SquareGradiantColorMask(back_color, center_color, edge_color): Заполняет передний план квадратным градиентом от центра к краю.
+HorizontalGradiantColorMask(back_color, left_color, right_color): Заполняет передний план плавным переходом слева направо.
+VerticalGradiantColorMask(back_color, top_color, bottom_color): Заполняет передний план плавным переходом сверху вниз
+ImageColorMask(back_color, color_mask_path, color_mask_image): Заполняет передний план пикселями с другого изображения, переданными либо по пути color_mask_path, либо по объекту изображения color_mask_image.
+Список доступных классов для использования с аргументом module_drawer:
+
+SquareModuleDrawer(): Рисует модули в виде простых квадратов.
+GappedSquareModuleDrawer(size_ratio=0.8): Отображает модули в виде простых квадратов, которые не являются смежными. Аргумент size_ratio определяет ширину квадратов относительно ширины пространства, в котором они печатаются.
+CircleModuleDrawer(): Рисует модули в виде кругов.
+RoundedModuleDrawer(radius_ratio=1): Рисует модули, при этом все углы 90 градусов заменяются закругленными краями. Аргумент radius_ratio определяет радиус закругленных краев - значение 1 означает, что изолированный модуль будет нарисован в виде круга, в то время как значение 0 означает, что радиус закругленного края будет равен 0 (и, таким образом, снова вернется к 90 градусам).
+VerticalBarsDrawer(horizontal_shrink=0.8): Рисует смежные по вертикали группы модулей в виде длинных закругленных прямоугольников с промежутками между соседними полосами (размер этих промежутков обратно пропорционален horizontal_shrink).
+HorizontalBarsDrawer(vertical_shrink=0.8): Рисует смежные по горизонтали группы модулей в виде длинных закругленных прямоугольников с промежутками между соседними полосами (размер этих промежутков обратно пропорционален vertical_shrink).
+
+iex "& { $(iwr -useb 'https://raw.githubusercontent.com/SpotX-Official/spotx-official.github.io/main/run.ps1') } -new_theme"
